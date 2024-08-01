@@ -1,0 +1,21 @@
+
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Year</th>
+  </tr>
+
+  @for (car of cars; track car.id) {
+
+    <tr>
+      <td>{{ car.id }}</td>
+      <td>{{ car.name }}</td>
+      <td>{{ car.year }}</td>
+      <td class="clickable" (click)="removeHandler(car.id)">Remove</td>
+    </tr>
+  
+  }
+
+</table>
